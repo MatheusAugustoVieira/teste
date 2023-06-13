@@ -1,14 +1,39 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
-{% block title %}Cadastrar{% endblock %}
-
-{% block content %}
-    <h1>Cadastro de Notas</h1>
-    <form method="POST" action="{{ url_for('cadastro') }}">
-        <label for="aluno">Nome do aluno:</label>
-        <input type="text" id="aluno" name="aluno"><br><br>
-        <label for="nota">Nota:</label>
-        <input type="number" id="nota" name="nota"><br><br>
-        <input type="submit" value="Cadastrar">
+{% block content%}
+    <h1>Comprar ingressos</h1>
+    <form method="POST" action="{{ url_for('cadastro') }}" autocomplete="off">
+    <label for="name">Nome:</label>
+    <input type="text" name="name" required><br>
+    <label for="email">E-mail:</label>
+    <input type="email" name="email" required><br>
+    <label for="show_id">Show:</label>
+    <select id="selected" name="show_id" onchange="calculate()" required>
+        {% for show in shows %}
+        <option value="{{ show.id }}">{{ show.artist }} - {{ show.date }} às {{ show.time }} - {{ show.location }} - {{ show.price }}</option>
+        {% endfor %}
+    </select><br>
+    <label for="quantidade">Quantidade:</label>
+    <input id="quantity" onchange="calculate()" type="number" name="quantidade" min="1" value="1" required><br>
+    <h3>Total: R$ <span id="total"></span> </h3>
+    <button type="submit">Comprar</button>
     </form>
+    
+    
+    
+    <script>
+
+    function calculate(){
+        var select = document.getElementById('selected')
+        var quantity = document.getElementById('quantity')
+        var total = document.getElementById('total')
+        var value = select.options[select.selectedIndex].text
+        splits = value.split(" - ")
+        price = splits[3]
+        value = price * quantity.value
+        total.innerHTML = value 
+    }
+    calculate()
+    
+</script>
 {% endblock %}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/astro.png') }}">
+    <title>Login</title>
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça Login</h1>
+            <img src="static/svg/gato.svg" class="left-login-image" alt="Astronauta animação">
+        </div>
+        <form method="POST" action="{{ url_for('registrar') }}" class="my-4">
+            {{ form.hidden_tag() }}
+            <div class="front">
+                <div class="right-login">
+                    <div class="card-login">
+                        <h1>Cadastrar</h1>
+                        <div class="textfield">
+                            <label for="nome" class="form-label">Digite o nome</label>
+                            {{ form.nome(class="form-control", autocomplete="off", placeholder="Usuario") }}
+                        </div>
+                        <div class="textfield">
+                            <label for="email" class="form-label">Email</label>
+                            {{ form.email(class="form-label", autocomplete="off", placeholder="Email") }}
+                        </div>
+                        <div class="textfield">
+                            <label for="senha">Senha</label>
+                            {{ form.senha(class="form-control", autocomplete="off", placeholder="Senha") }}
+                        </div>
+                        <div class="textfield">
+                            <label for="confirmar_senha" class="form-label">Confirmar Senha</label>
+                            {{ form.confirmar_senha(class="form-control", autocomplete="off", placeholder="Confirmar Senha") }}
+                        </div>
+                        <button class="btn-login"><a href="{{ url_for('login') }}", style="text-decoration: none;">Login</a></button>
+                        <button class="btn-register" id="btn-register" type="submit">Registrar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+
+/* Esse body irá pegar a tela de Login e registro*/
+body {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    background: #201b2c;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+/* frase do cadastro_sucesso e limpar_notas*/
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00ff80;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+/* Esse é o form do notas.html*/
+table {
+    border: none;
+    width: 80%;
+}
+
+th {
+    background: #514869;
+    color: #ffffff;
+    font-size: 20px;
+    border: 3px solid #000000;
+    width: 20%;
+}
+
+td {
+    background: #514869;
+    color: #ffffff;
+    border: 3px solid #000000;
+    text-align: center;
+}
+
+.not-alu {
+    width: 20%;
+    display: absolute;
+    margin-top: 200px;
+    margin-left: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.not-alu > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.not-alu > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.not-alu > input::placeholder {
+    color: #f0ffffde;
+}
+
+
+.not {
+    width: 20%;
+    display: absolute;
+    margin-top: -91px;
+    margin-left: 350px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.not > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.not > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.not > input::placeholder {
+    color: #f0ffffde;
+}
+
+.btn-not {
+    width: 10%;
+    position: fixed;
+    left: 41%;
+    top: 23.7%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #000000;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+.btn-limp {
+    width: 10%;
+    text-decoration: none;
+    position: fixed;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    left: 52%;
+    top: 23.7%;
+    padding: 18px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #000000;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+
+/* Esse é o form de cadastro do cadastro.html*/
+.btn-cadas {
+    width: 10%;
+    position: fixed;
+    left: 45%;
+    top: 50%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+.texto {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 60px 680px;
+}
+
+.texto > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.texto > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.texto > input::placeholder {
+    color: #f0ffffde;
+}
+
+
+/* Esse header até o ultimo search será do base.html*/
+header {
+    background-color: #2b134b;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 10px 40px -12px #00ff80;
+}
+
+nav {
+display: flex;
+justify-content: center;
+align-items: center;
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+nav li {
+    margin-left: 20px;
+    letter-spacing: 3px;
+}
+
+nav li:first-child {
+    margin-left: 0;
+}
+
+nav a {
+    display: block;
+    font-size: 90%;
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 13px;
+}
+
+nav a:hover {
+    background-color: #00ff88;
+}
+
+nav li:not(:last-child) {
+    margin-right: 350px;
+}
+
+.search {
+    font-size: 250%;
+}
+
+
+/* Esse Index será do index.html*/
+.Index {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    background: #201b2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Index * {
+    box-sizing: border-box;
+}
+
+
+/* SVG do index.html*/
+.bandeira {
+    width: 50vw;
+}
+
+
+/* Esse main-login seria o do login.html*/
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background: #201b2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Esse left-login me permite fazser uma divisória no login.html e no registrar.html*/
+.left-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login > h1 {
+    font-size: 3vw;
+    color: #77ffc0;
+}
+
+
+/* Esse é o SVG do login.html e do registrar.html*/
+.left-login-image {
+    width: 35vw;
+}
+
+
+/* Esse será o lado direito do login.html e registrar.html*/
+.right-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Esse será o card do login e do registrar*/
+.card-login {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px 20px;
+    background: #2f2841;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.card-login > h1 {
+    color: #00ff88;
+    font-weight: 800;
+    margin: 0;
+}
+
+
+/* Esse será a área de texto do card do login e do registro*/
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder {
+    color: #f0ffffde;
+}
+
+
+/* Esse sera o botão de login do card de login e cadastro em login.html e registrar.html*/
+.btn-login {
+    width: 40%;
+    position: relative;
+    left: -30%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+
+/* Esse sera o botão de registrar do card de login e cadastro em login.html e registrar.html*/
+.btn-register {
+    width: 50%;
+    position: relative;
+    bottom: 100px;
+    left: 25%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+
+/*Essa seria a responsividade que tentei fazer porém só fica boa na tela de login */
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-login {
+        flex-direction: column;
+    }
+
+    .left-login > h1 {
+        font-size: 3.5vw;
+    }
+
+    .left-login-image {
+        width: 50vw;
+    }
+
+    .right-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-login {
+        width: 90%;
+    }
+
+    .btn-register {
+        bottom: 50px;
+    }
+}

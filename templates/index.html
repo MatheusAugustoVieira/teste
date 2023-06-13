@@ -1,11 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Gerenciador de Notas</title>
-</head>
-<body>
-    <h1>Gerenciador de Notas</h1>
-    <p><a href="{{ url_for('cadastro') }}">Cadastrar nova nota</a></p>
-    <p><a href="{{ url_for('notas') }}">Visualizar notas cadastradas</a></p>
-</body>
-</html>
+{% extends "base.html"%}
+    <title>{% block tittle %}Gerenciador Ingressos{% endblock %}</title>
+
+{% block content %}
+<h1>Programação do Festival</h1>
+<div class="show">
+    <table>
+        <thead>
+            <tr>
+            <th>Artista</th>
+            <th>Data</th>
+            <th>Hora</th>
+            <th>Local</th>
+            <th>Preço</th>
+            <th>Quantidade Disponível</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for show in shows %}
+            <tr>
+                <td>{{ show.artist }}</td>
+                <td>{{ show.date }}</td>
+                <td>{{ show.time }}</td>
+                <td>{{ show.location }}</td>
+                <td>{{ show.price }}</td>
+                <td>{{show.available_tickets}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
